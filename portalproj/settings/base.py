@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #My Apps
     'home',
+    #Third Party Apps
+    'crispy_forms',
+    'registration',
+    
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -142,3 +146,11 @@ def get_env_variable(var_name):
         raise ImproperlyConfigured(error_msg)
  
 SECRET_KEY = get_env_variable('SECRET_KEY')
+
+
+
+# CRISPY VARIABLE
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+#Django Registration Redux
+LOGIN_REDIRECT_URL = '/'

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Login
+{% endblock %}
+
+
+{% block style %}
+<style>
+.full {
+   background: url({% static 'img/login_background.jpg' %}) no-repeat center center fixed; 
+  /*background-color: #ccc;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
+
+<link href="{% static 'css/login.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<div class='row'>
+<div class='col-sm-4 col-sm-offset-8'>
+<h1>Login</h1>
+<form method="post" action=".">
+  {% csrf_token %}
+  
+  <div class="form-group">
+  
+  {{ form | crispy }}
+  <!--
+  
+  {{ form.username | as_crispy_field }}
+  {{ form.username | as_crispy_errors}}
+  {{ form.password | as_crispy_field }}
+  {{ form.password | as_crispy_errors }}
+  
+  -->
+  </div>
+  
+
+  <input class='btn btn-block btn-primary' type="submit" value="{% trans 'Submit' %}" />
+  <input type="hidden" name="next" value="{{ next }}" />
+</form>
+<hr/>
+<div class='text-banner'>
+<p>{% trans "Forgot password" %}? <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>!</p>
+<p>{% trans "Not member" %}? <a href="{% url 'registration_register' %}">{% trans "Register" %}</a>!</p>
+</div>
+
+
+</div>
+
+</div>
+
+
+</div>
+{% endblock %}
+
