@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     #Third Party Apps
     'crispy_forms',
     'registration',
+    'UserExtendApp',
     
 ]
 
@@ -154,3 +155,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 #Django Registration Redux
 LOGIN_REDIRECT_URL = '/'
+
+
+# Extend User Model variable
+
+AUTH_USER_MODEL = 'UserExtendApp.User'
+
+

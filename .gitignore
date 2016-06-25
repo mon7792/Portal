@@ -4,3 +4,5 @@ portalproj/settings/__pycache__/
 Documentation/PORTAL_Setup_Doc.docx
 portal.komodoproject
 home/__pycache__/
+UserExtendApp/__pycache__/
+UserExtendApp/migrations/

@@ -21,5 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home_page , name='home'), # url which holds home Page
     url(r'^accounts/', include('registration.backends.default.urls'), name= "account"), # Django Registration Redux urls
-    
+    url(r'^user/', include('UserExtendApp.urls'), name= "user"), # Edit profile
 ]

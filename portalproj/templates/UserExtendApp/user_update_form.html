@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+  Edit
+{% endblock %}
+
+{% block navbar %}
+    {% include "home/navbar.html" %}
+{% endblock %}
+
+
+{% block sidebar %}
+    {% include "home/sidebar.html" %}
+{% endblock %}
+
+{% block main %}
+<form method="POST" class="post-form">{% csrf_token %}
+    {% crispy form %}
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+{% endblock %}
