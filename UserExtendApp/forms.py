@@ -17,7 +17,7 @@ class UserForm(forms.ModelForm):
         self.helper.layout = Layout(
             TabHolder(
                 Tab(
-                    'Personal INFO',
+                    'Personal',
                     'first_name',
                     'last_name',
                     'email',
@@ -26,7 +26,7 @@ class UserForm(forms.ModelForm):
                     'DOB',
                     ),
                 Tab(
-                    'SJM Details',
+                    'SJM',
                     'SJMID',
                     'SJMBillableDate',
                     'SJMEMAILID',

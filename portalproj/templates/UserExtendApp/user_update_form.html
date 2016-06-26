@@ -17,11 +17,10 @@
 {% block main %}
 <form method="POST" class="post-form">{% csrf_token %}
     <div class ="row">
-        <div class="col-sm-6 col-sm-offset-2">
+        <div class="empdetail col-sm-6 col-sm-offset-2">
             {% crispy form %}        
         </div>
-    </div>
-    
+    </div>    
     <button type="submit" class="save btn btn-default">Save</button>
 </form>
 {% endblock %}

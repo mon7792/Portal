@@ -7,6 +7,14 @@
 body {
   padding-top: 50px;
 }
+.full{
+  background-color: #007fff !important;
+}
+
+.tab-pane.active a{
+  background-color: #007fff !important;
+}
+
 
 
 /*
@@ -46,7 +54,6 @@ body {
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     background-color: #303030;
-    border-right: 1px solid #eee;
     -webkit-transition: all 0.5s;
         -moz-transition: all 0.5s;
         -ms-transition: all 0.5s;
@@ -70,7 +77,6 @@ body {
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     background-color: #303030;
-    border-right: 1px solid #eee;
     -webkit-transition: all 0.5s;
         -moz-transition: all 0.5s;
         -ms-transition: all 0.5s;
@@ -87,6 +93,21 @@ body {
     color: #000;
     background-color: #fff;
   }
+
+
+
+
+.empdetail{
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 20px;
+  border-bottom-width: 20px;
+  height: 534px;
+}
+
+
+
+
 
 
 
